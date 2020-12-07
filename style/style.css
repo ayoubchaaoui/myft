@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+font-family: Arial, Helvetica, sans-serif;
+scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    margin: auto;
+    max-width: 1100px;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.black{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color:#252E31;
+    position: relative;
+    text-transform: uppercase;
+}
+h3::before {
+    content: "";
+    position: absolute;
+    left:7px;
+    bottom: -10px;
+    background-color:#252E31;
+    height: 3px;
+    width: 30px;
+}
+.sld-header{
+    font-weight: bold;
+    color: transparent;
+    letter-spacing: 2px;
+    font-size: 33px;
+    -webkit-text-stroke: .7px #fafafa;
+    -mo-text-stroke: .7px #fafafa;
+    -o-text-stroke: .7px #fafafa;
+}
+.sld-header::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width:0;
+    color:  #fafbfc ;
+    border-right: 2px solid #fcfcfc ;
+    overflow: hidden;
+    animation: full 6s linear infinite;
+}
+@keyframes full {
+    0% , 10% , 100%{
+        width: 0% ;
+    }
+    70% , 90%{
+        width: 100% ;
+    }
+}
+
+
+.p-80 {
+    width: 80%;
+}
+
+.p-75 {
+    width: 75%;
+}
+
+.p-70 {
+    width: 70%;
+}
+
+.p-60 {
+    width: 60%;
+}
+
+.p-50 {
+    width: 50%;
+}
+
+.header{
+    height: 100vh;
+}
+.header .slider {
+    height: calc(100% - 50px);
+    background-image: url('../imgs/children1.jpg');
+    background-size: cover;
+}
+
+.header .nav {
+    background-color:#252E31 ;
+    color: #fff;
+    overflow: hidden;
+    text-transform:uppercase ;
+    height: 50px;
+    font-size:14px;
+    
+    
+}
+.header .nav h2 span {
+    color:#2ECC71 ;
+}
+.header .nav h2 {
+    display: inline-block;
+    line-height: 50px;
+}
+.header .nav ul{
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    float: right;
+    overflow: hidden;
+}
+.header .nav ul li a.active{
+    color:#2ECC71;
+}
+.header .nav ul li{
+    float: left;
+    padding-left: 10px;
+    line-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.header .nav ul li a{
+    color:#fff;
+    transition: .5S all;
+}
+.header .nav ul li a:hover{
+    color: #2ECC71;
+}
+.about-me{
+    position: relative;
+}
+.about-text h4{
+    margin: 30px;
+    margin-bottom: 15px;
+}
+.about-cont {
+    margin: auto;
+    overflow: hidden;
+}
+.about-me .about-txt{
+    position:relative;
+    top:50x;
+    width:70% ;
+    background-color: #fcfcfc;
+    padding: 40px;
+    padding-left: 100px;
+    line-height: 1.9;
+    left: 210px;
+    color: #888;
+}
+.about-me img{
+    position: absolute;
+    top: 70px;
+    height: 170px;
+
+}
+
+.skils {
+    overflow: hidden;
+}
+
+.skils .skil-left {
+    float: left;
+    width: 49%;
+    padding: 30px;
+}
+.skils .skil-left h4 {
+    margin: 10px;
+}
+.skils .skil-left p {
+    margin-left: 20px;
+    color:#888;
+    line-height: 1.7;
+}
+.skils .skil-left a {
+    text-decoration: none;
+    color: #2ECC71;
+    border: 1px solid #2ECC71;
+    background-color: transparent;
+    padding: 10PX 16PX;
+    float: right;
+    margin: 30px;
+    transition: .5s all;
+    border-radius: 4px;
+}
+.skils .skil-left a:hover {
+    color: white;
+    background-color: #2ECC71;
+}
+.skils .skil-right {
+    float: right;
+    width: 49%;
+    padding: 30px;
+    margin-left: 2%;
+}
+.skils .skil-right .prog{
+    width: 100%;
+    height: 6px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+}
+.skils .skil-right h5 {
+    margin-left: 15px;
+}
+.skils .skil-right .prog span {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #2ECC71;
+}
+
+.portfolio .my-work {
+    overflow: hidden;
+}
+.portfolio .my-work > div {
+    width: 32%;
+    float: left;
+    height: 250PX;
+    margin-left: 1%;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.portfolio .my-work > div:hover .hov {
+    background-color: #2ecc70c4;
+}
+.portfolio .my-work > div:hover i{
+    color:#fff;
+}
+.portfolio .my-work .hov {
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    transition: all .5s;
+    background-color: #2ecc7000
+}
+.portfolio .my-work .hov i {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: rgba(255, 255, 255, 0);
+    transition: all .5s;
+} 
+.portfolio .my-work img {
+    height: 100%;
+    width: 100%;
+}
+.contact  {
+    overflow: hidden;
+}
+.contact .img-cont {
+    float: right;
+}
+.contact .img-cont img {
+    height: 350px;
+}
+.contact form {
+    float: left;
+    margin: 14px;
+}
+.contact form input ,
+.contact form label {
+    display: block;
+}
+.contact form label{
+    margin: 10px 0;
+}
+.contact form input {
+    border: 1px solid #c4ffdc;
+    width: 300px;
+    height: 30px;
+    color: #2ECC71;
+    background: rgb(250, 248, 248 , 0.2);
+    padding: 0 5px;
+}
+.contact form textarea {
+    border: 1px solid #c4ffdc;
+    width: 300px;
+    height: 200px;
+    color: #2ECC71;
+    background: rgb(250, 248, 248 , 0.2);
+    padding: 1px 5px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    resize: none;
+}
+.contact form textarea:focus ,
+.contact form input:focus {
+    border: 1px solid #99e9b9;
+}
+.contact form input[type="button"] {
+    cursor: pointer;
+    transition: all .5S;
+    margin-bottom: 10px;
+}
+.contact form input[type="button"]:hover {
+    background-color:  #2ECC71;
+    color: #fff;
+}
+footer {
+    overflow: hidden;
+    background-color: #252E31;
+    color: #2ECC71;
+    font-weight: bold;
+}
+footer .copy {
+    float: left;
+    margin: 15px;
+}
+footer .social svg {
+    fill:#2ECC71;
+    height: 20px;
+   padding-left: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+footer .social svg:hover {
+    fill:#fff;
+}
+footer .social {
+    float: right;
+    margin: 15px;
+}
